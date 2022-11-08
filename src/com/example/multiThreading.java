@@ -56,6 +56,11 @@ public class multiThreading {
         thread1.start();
 
         //this is another method to create a thread without making a class
+        //in a similar fashion, a boolean variable can be created to signal the thread to stop in case of infinite-loops for instance
+        //because of cases where the thread might cache the variable and never see the chance, use the volatile keyword to ensure it isn't missed
+
+        //the join method is a way of forcing the threads to wait for something to happen
+        //a better method is to create a method that modifies the variable that both threads refer to, have the threads call the method, and declare the method as synchronized so that it forces one of the calls to wait
         Thread threadCustom = new Thread(new Runnable() {
             @Override
             public void run() {
