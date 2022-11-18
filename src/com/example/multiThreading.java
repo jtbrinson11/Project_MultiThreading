@@ -77,3 +77,11 @@ public class multiThreading {
         threadCustom.start();
     }
 }
+
+    //use an ExecutorService to run some tasks asynchronously that will assign tasks as threads become available
+    //use a CountDownLatch to ensure that a task waits for others to finish
+    //use a BlockingQueue to fill a queue up to a point, and block inserts until it gets empty enough
+    //use a ReentrantLock to allow a thread to be used more than once, and to offer more flexibility with running threads instead of the synchronized keyword
+    //use a Semaphore to grant access to a thread only through the semaphore itself by way of a counter, if the counter is 0, deny access, if greater than 0, grant access
+    //use Callable as a way to return a result when a thread is complete, and Future as a way to store the result when the Callable is finished
+    //use SwingWorker as a way to run background tasks while displaying a gui app
